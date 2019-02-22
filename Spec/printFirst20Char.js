@@ -27,6 +27,7 @@ function testPrintFirst20Char() {
   var testNoteListView = new NoteListView(testNoteList);
 
   testNoteList.addNote(testNote);
+  testNoteListView.getFirst20Char();
   console.log("testPrintFirst20Char: " + assert.isTrue(testNoteListView.printFirst20Char() === "<li><div>how much of this can</div></li>"  ));
 };
 testPrintFirst20Char();

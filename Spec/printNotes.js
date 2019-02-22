@@ -22,12 +22,12 @@ function testPrintNotes() {
       },
     }
   var testNote = new noteDouble("Hello, buddy");
-  var testNote = new noteDouble("Hey")
+  var testNote2 = new noteDouble("Hey")
   var testNoteList = new noteListDouble();
   var testNoteListView = new NoteListView(testNoteList);
 
   testNoteList.addNote(testNote);
-  testNoteList.addNote(testNote);
-  console.log("testPrintNotes: " + assert.isTrue(testNoteListView.printNotesInHTML(testNoteList) === "<ul>" + "<li><div>" + testNote.showNote() + "</div></li>" + "<li><div>" + testNote.showNote() + "</div></li>" + "</ul>" ));
+  testNoteList.addNote(testNote2);
+  console.log("testPrintNotes: " + assert.isTrue(testNoteListView.printNotesInHTML(testNoteList) === "<ul>" + "<li><div>" + testNote.showNote() + "</div></li>" + "<li><div>" + testNote2.showNote() + "</div></li>" + "</ul>" ));
 };
 testPrintNotes();
