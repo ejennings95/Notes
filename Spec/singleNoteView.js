@@ -10,9 +10,9 @@ function testSingleNotePrintHTML() {
   }
 
   var testNote = new noteDouble("testing");
-  var singleViewNote = new SingleViewnote(testNote);
+  var singleNoteView = new SingleNoteView(testNote);
 
-  console.log("testSingleNotePrintHTML: " + assert.isTrue(singleViewNote.printHTML() === "<div>testing</div>" ))
+  console.log("testSingleNotePrintHTML: " + assert.isTrue(singleNoteView.printHTML() === "<div><li>testing</li></div>" ))
 
   };
   testSingleNotePrintHTML();
