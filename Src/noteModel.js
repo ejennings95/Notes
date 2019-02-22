@@ -9,5 +9,9 @@
         return this._noteText;
     };
 
+    Note.prototype.showNoteId = function () {
+      return this._noteId;
+    };
+
     exports.Note = Note;
 })(this);
