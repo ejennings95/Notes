@@ -11,6 +11,7 @@
   exports.NoteController = NoteController;
 
   makeUrlChangeShowNoteForCurrentPage();
+  listenForFormSubmit();
 
   function makeUrlChangeShowNoteForCurrentPage() {
     window.addEventListener("hashchange", showNoteForCurrentPage);
@@ -30,6 +31,14 @@
         view = new SingleNoteView(note)
         document.getElementById("app").innerHTML = view.printHTML();
       }
+    })
+  };
+
+  function listenForFormSubmit() {
+    document.getElementById('text').addEventListener("submit", function(submitEvent) {
+      submitEvent.preventDefault();
+      var newNote = new Note(submitEvent.path[0][0].value, genId.newId());
+      newNoteList.addNote(newNote);
     })
   };
 })(this);

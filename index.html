@@ -20,5 +20,11 @@
        <script src="./Src/noteListModel.js" charset="utf-8"></script>
        <script src="./Src/noteListViewModel.js" charset="utf-8"></script>
        <script src="./Src/singleNoteView.js" charset="utf-8"></script>
+       <script src="./Src/generateId.js" charset="utf-8"></script>
+       <script>
+          var genId = new GenerateId();
+          var newNoteList = new NoteList();
+          var control =  new NoteController(newNoteList);
+        </script>
     </body>
 </html>
