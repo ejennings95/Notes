@@ -1,8 +1,29 @@
 function testPrintNotes() {
+    function noteDouble(string) {
+      this._noteText = string;
+    }
 
-  var testNote = new Note("Hello, buddy");
-  var testNote = new Note("Hey")
-  var testNoteList = new NoteList();
+    noteDouble.prototype = {
+      showNote: function() {
+        return this._noteText;
+      }
+    }
+
+    function noteListDouble() {
+      this._notes = [];
+    }
+
+    noteListDouble.prototype = {
+      showNotes: function() {
+        return this._notes;
+      },
+      addNote: function(note) {
+        return this._notes.push(note);
+      },
+    }
+  var testNote = new noteDouble("Hello, buddy");
+  var testNote = new noteDouble("Hey")
+  var testNoteList = new noteListDouble();
   var testNoteListView = new NoteListView(testNoteList);
 
   testNoteList.addNote(testNote);
