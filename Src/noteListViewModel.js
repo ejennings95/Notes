@@ -14,6 +14,13 @@
       return "<ul>" + html.join("") + "</ul>";
     };
 
+    NoteListView.prototype.getFirst20Char = function() {
+      var first20Char = this._noteList.showNotes().map(note => {
+        return note.showNote().substring(0, 20);
+      });
+      return first20Char;
+    };
+
     exports.NoteListView = NoteListView;
 
 })(this);
