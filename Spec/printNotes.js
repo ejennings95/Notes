@@ -7,6 +7,6 @@ function testPrintNotes() {
 
   testNoteList.addNote(testNote);
   testNoteList.addNote(testNote);
-  console.log("testPrintNotes: " + assert.isTrue(testNoteListView.printNotes(testNoteList) === "<ul>" + "<li><div>" + testNote.showNote() + "</div></li>" + "<li><div>" + testNote.showNote() + "</div></li>" + "</ul>" ));
+  console.log("testPrintNotes: " + assert.isTrue(testNoteListView.printNotesInHTML(testNoteList) === "<ul>" + "<li><div>" + testNote.showNote() + "</div></li>" + "<li><div>" + testNote.showNote() + "</div></li>" + "</ul>" ));
 };
 testPrintNotes();
